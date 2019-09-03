@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Random;
@@ -15,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
 	//  TODO: deklarasikan variabel di sini
 	private EditText numberInput;
 	private int random;
+	private TextView outputText;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +36,8 @@ public class MainActivity extends AppCompatActivity {
 
 	public void handleGuess(View view) {
 		// TODO: Tambahkan logika untuk melakukan pengecekan angka
-		numberInput = Integer.valueOf(numberInput)
+		// numberInput = Integer.valueOf(numberInput)
+
 	}
 
 	public void handleReset(View view) {
