@@ -29,15 +29,18 @@ public class MainActivity extends AppCompatActivity {
 
 	// TODO: generate angka random di sini
 	private void initRandomNumber() {
-		final int min = 20;
-		final int max = 80;
+		final int min = 1;
+		final int max = 100;
 		random = new Random().nextInt((max - min) + 1) + min;
 	}
 
 	public void handleGuess(View view) {
 		// TODO: Tambahkan logika untuk melakukan pengecekan angka
 		// numberInput = Integer.valueOf(numberInput)
-
+		//String hasil = numberInput.getText().toString();
+		//outputText.setText(hasil);
+		Toast.makeText(this, "Hai"+random, Toast.LENGTH_SHORT).show();
+        onDestroy();
 	}
 
 	public void handleReset(View view) {
