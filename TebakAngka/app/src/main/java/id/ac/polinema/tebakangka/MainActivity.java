@@ -24,6 +24,9 @@ public class MainActivity extends AppCompatActivity {
 		setContentView(R.layout.activity_main);
 		// TODO: bind layout di sini
 		numberInput = findViewById(R.id.number_input);
+		if (numberInput.getText().toString().length() == 0){
+			numberInput.setError("Isi Bilangan Terlebih Dahulu !");
+		}
 		outputText = findViewById(R.id.textView);
 		initRandomNumber();
 	}
@@ -38,14 +41,22 @@ public class MainActivity extends AppCompatActivity {
 	public void handleGuess(View view) {
 		// TODO: Tambahkan logika untuk melakukan pengecekan angka
 		int input = Integer.parseInt(numberInput.getText().toString());
-		//String hasil = numberInput.getText().toStri ng();
+		//String hasil = numberInput.getText().toString();
 		outputText.setText(""+random);
-		Toast.makeText(this, "Hai"+input, Toast.LENGTH_SHORT).show();
+		if(input == random){
+            Toast.makeText(this, "Jawaban Anda Benar !", Toast.LENGTH_SHORT).show();
+        }
+		else{
+            Toast.makeText(this, "Jawaban Anda Salah !", Toast.LENGTH_SHORT).show();
+        }
+		//Toast.makeText(this, "Hai"+input, Toast.LENGTH_SHORT).show();
 //        onDestroy();
 	}
 
 	public void handleReset(View view) {
 		// TODO: Reset tampilan
 		numberInput.setText("");
+		initRandomNumber();
+		outputText.setText(""+random);
 	}
 }
