@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 		setContentView(R.layout.activity_main);
 		// TODO: bind layout di sini
 		numberInput = findViewById(R.id.number_input);
+		outputText = findViewById(R.id.textView);
 		initRandomNumber();
 	}
 
@@ -36,11 +37,11 @@ public class MainActivity extends AppCompatActivity {
 
 	public void handleGuess(View view) {
 		// TODO: Tambahkan logika untuk melakukan pengecekan angka
-		// numberInput = Integer.valueOf(numberInput)
-		//String hasil = numberInput.getText().toString();
-		//outputText.setText(hasil);
-		Toast.makeText(this, "Hai"+random, Toast.LENGTH_SHORT).show();
-        onDestroy();
+		int input = Integer.parseInt(numberInput.getText().toString());
+		//String hasil = numberInput.getText().toStri ng();
+		outputText.setText(""+random);
+		Toast.makeText(this, "Hai"+input, Toast.LENGTH_SHORT).show();
+//        onDestroy();
 	}
 
 	public void handleReset(View view) {
