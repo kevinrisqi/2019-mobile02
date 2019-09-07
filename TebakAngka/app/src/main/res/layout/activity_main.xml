@@ -24,6 +24,7 @@
 		android:layout_margin="10dp"
 		android:hint="@string/input_hint"
 		android:inputType="numberSigned"
+		android:maxLength="3"
 		/>
 
 	<Button
